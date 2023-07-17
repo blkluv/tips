@@ -55,8 +55,7 @@ export default function Home() {
       const signer = await getProviderOrSigner(true);
       const contract = getDaoContractInstance(signer);
 
-      const imgCID = saveToIPFS(file);
-      //console.log(imgCID);
+      const imgCID = await saveToIPFS(file);
 
       const txn = await contract.addPost(description, imgCID);
       setLoading(true);
@@ -74,7 +73,6 @@ export default function Home() {
       const provider = await getProviderOrSigner(false);
       const contract = getDaoContractInstance(provider);
 
-      //const txn = await contract.getPost(id);
       const txn = await contract.getPost(0);
       setLoading(true);
 
@@ -90,13 +88,9 @@ export default function Home() {
   };
 
   const saveToIPFS = async (file) => {
-    // create a new multipart form data
     const formData = new FormData();
-    // add file to the form data
-    //console.log("--->", file);
     formData.append("file", file);
 
-    //console.log("===>", process.env.NEXT_PUBLIC_WEB3_STORAGE_TOKEN);
     const TOKEN = process.env.NEXT_PUBLIC_WEB3_STORAGE_TOKEN;
     var config = {
       method: "post",
@@ -108,10 +102,7 @@ export default function Home() {
       data: formData,
     };
 
-    // Posting the form data to the IPFS API
     const response = await axios(config);
-    // returning the CID
-    // console.log(response.data.cid);
     return response.data.cid;
   };
 
@@ -190,14 +181,14 @@ export default function Home() {
               />
             </div>
             <div>
-            <button
-            className="items-center bg-gradient-to-r from-pink-500 to-purple-400 rounded-full font-medium p-2 shadow-lg m-4 w-24"
-            onClick={addPost}
-            >
-            <span role="img" aria-label="Sparkles">
-            ✨
-            </span>
-            </button>
+              <button
+                className="items-center bg-gradient-to-r from-pink-500 to-purple-400 rounded-full font-medium p-2 shadow-lg m-4 w-24"
+                onClick={addPost}
+              >
+                <span role="img" aria-label="Sparkles">
+                  ✨
+                </span>
+              </button>
             </div>
           </div>
         </Layout>
@@ -205,71 +196,3 @@ export default function Home() {
     </>
   );
 }
-
-/**
-
- <main>
-        <div>
-          <input type="text" onChange={(e) => setText(e.target.value)} />
-          <button onClick={addPost}>Add Post</button>
-          </div>
-          <div>
-          <button onClick={getPost}>Get Post</button>
-          </div>
-          <div>
-          <button onClick={getPostArr}>Get POST Array</button>
-          </div>
-          <div>
-          <button onClick={buyMeCoffee}>Buy Me Coffee</button>
-        </div>
-        </main>
-      
- */
-/**
-        const getPostArr = async () => {
-          try {
-            const provider = await getProviderOrSigner(false);
-            const contract = getDaoContractInstance(provider);
-        
-            const txn = await contract.getPostArr();
-            setLoading(true);
-        
-            let posts = await Promise.all(
-              txn.map(async (i) => {
-                //let auth = await contract.profiles(i.author);
-                console.log(i);
-                let post = {
-                  auth: i.author,
-                  id: i.id,
-                  tip: i.tipAmount,
-                  txt: i.postTxt,
-                  img: i.postImg,
-                };
-        
-                return post;
-              })
-            );
-        
-            setArr(posts);
-            console.log(posts);
-            setLoading(false);
-          } catch (error) {
-            console.log(error);
-          }
-        };
-        
-        const buyMeCoffee = async (id) => {
-          try {
-            const signer = await getProviderOrSigner(true);
-            const contract = getDaoContractInstance(signer);
-        
-            const txn = await contract.buyMeCoffee(0);
-            setLoading(true);
-        
-            console.log(txn);
-            setLoading(false);
-          } catch (error) {
-            console.log(error);
-          }
-        };
-*/

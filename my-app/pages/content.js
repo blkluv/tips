@@ -93,7 +93,7 @@ function Content() {
   return (
     <Layout title="Content">
       <div className="p-4 bg-white">
-      <p className="text-center text-xl border-1 mb-3" role="img" aria-label="Globe">
+        <p className="text-center text-xl border-1 mb-3" role="img" aria-label="Globe">
           🌍
         </p>
         <main>

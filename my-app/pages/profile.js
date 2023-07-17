@@ -86,18 +86,9 @@ function Profile() {
   };
 
   useEffect(() => {
-    if (!walletConnected) {
-      web3ModalRef.current = new Web3Modal({
-        network: "mumbai",
-        providerOptions: {},
-        disableInjectedProvider: false,
-      });
-
-      connectWallet();
-
-      getPost();
-    }
-  }, [walletConnected]);
+    connectWallet();
+    getPost();
+  }, [connectWallet, getPost]);
 
   return (
     <Layout title="Content">

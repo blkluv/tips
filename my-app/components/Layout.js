@@ -1,4 +1,4 @@
-{ providers } from "ethers";
+import { providers } from "ethers";
 import Head from "next/head";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -107,3 +107,5 @@ function Layout({ title, children }) {
     </>
   );
 }
+
+export default Layout;

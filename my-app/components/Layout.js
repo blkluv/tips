@@ -61,7 +61,7 @@ function Layout({ title, children }) {
         <meta name="Heart to heart decentralized social media platform" content="Social Media" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="flex text-black bg-white min-h-screen flex-col justify-between">
+      <div className="flex text-black bg-white flex-col justify-between">
         <header>
           <nav className="flex h-12 items-center px-4 bg-black text-white justify-between shadow-md">
             <Link href="/">
@@ -73,7 +73,7 @@ function Layout({ title, children }) {
                 </span>
               </div>
             </Link>
-            <div className="flex items-center gap-5 ml-auto">
+            <div className="flex items-center gap-3 ml-auto">
               <Link href="/profile">
                 <span role="img" aria-label="Heart with stars">
                   💖

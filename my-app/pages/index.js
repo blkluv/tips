@@ -154,13 +154,13 @@ export default function Home() {
             <div className="flex-col items-center">
               <textarea
                 value={description}
-                placeholder="Write Something positive..."
-                className="w-80 h-32 placeholder:text-gray-600 bg-slate-700  rounded-md mt-2 p-2 border border-[#444752] focus:outline-none"
+                placeholder="Positive vibes only..."
+                className="w-80 h-32 placeholder:text-gray-600 bg-black rounded-md mt-2 p-2 border border-[#444752] focus:outline-none"
                 onChange={(e) => setDescription(e.target.value)}
               />
             </div>
             <div>
-              <label className="text-[#9CA3AF] mt-10">Upload Image</label>
+              <label className="text-[#9CA3AF] mt-10">Upload Good Juju</label>
               <div
                 className="border-2 w-64 border-gray-600  border-dashed rounded-md mt-2 p-2  h-36 items-center justify-center flex"
                 onClick={() => {

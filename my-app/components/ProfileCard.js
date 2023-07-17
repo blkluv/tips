@@ -52,16 +52,16 @@ export const ProfileCard = ({ img, txt, author, tip }) => {
   };
 
   return (
-    <div className="max-w-sm  bg-gradient-to-b from-blue-900 to-black rounded-lg border border-gray-200 shadow-md">
-      <img className="rounded-t-lg" src={`https://${img}.ipfs.w3s.link`} />
-      <div className="px-3 h-30">
-        <p className="text-base">{txt}</p>
-      </div>
-      <div className="pt-4 mb-3 flex justify-center items-center">
-        <p className="p-1 w-[50%] items-center  text-sm bg-gradient-to-br from-blue-500 to-black rounded-md shadow-lg text-center">
-          {tip.toString()}
-        </p>
-      </div>
-    </div>
+    <div className="max-w-sm bg-gradient-to-b from-blue-900 to-black rounded-lg border border-gray-200 shadow-md">
+  <img className="rounded-t-lg" src={`https://${img}.ipfs.w3s.link`} />
+  <div className="px-3 h-30">
+    <p className="text-base">{txt}</p>
+  </div>
+  <div className="pt-4 mb-3 flex justify-center items-center">
+    <p className="p-1 w-[50%] items-center text-white text-sm bg-gradient-to-br from-blue-500 to-black rounded-md shadow-lg text-center">
+      Tip: {tip.toString()}
+    </p>
+  </div>
+</div>
   );
 };

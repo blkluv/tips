@@ -35,7 +35,7 @@ function Layout({ title, children }) {
     }
 
     const signer = web3Provider.getSigner();
-    // Get the address associated to the signer which is connected to  MetaMask
+    // Get the address associated with the signer which is connected to MetaMask
     const address = await signer.getAddress();
 
     setWalletAddress(address.substring(0, 6) + "...");
@@ -65,45 +65,48 @@ function Layout({ title, children }) {
         <header>
           <nav className="flex h-12 items-center px-4 bg-black text-white justify-between shadow-md">
             <Link href="/">
-              <span className="bg-clip-text text-3xl  text-transparent bg-gradient-to-r from-pink-400 to-purple-500">
-                LUV NFT
-              </span>
-              <Link href="/content">
-              <span role="img" aria-label="Globe">
-               🌍
-              </span>
-              </Link>
+              <div className="flex items-center">
+                <span className="bg-clip-text text-3xl text-transparent bg-gradient-to-r from-pink-400 to-purple-500">
+                  <span role="img" aria-label="Emoji">
+                    💕
+                  </span>
+                </span>
+                <div className="flex items-center gap-5 ml-auto">
+                  <Link href="/profile">
+                    <span role="img" aria-label="Heart with stars">
+                      💖
+                    </span>
+                  </Link>
+                  <Link href="/content">
+                    <span role="img" aria-label="Globe">
+                      🌍
+                    </span>
+                  </Link>
+                </div>
+              </div>
             </Link>
-            <div className="flex items-center gap-5">
-            <Link href="/profile">
-              <span role="img" aria-label="Heart with stars">
-               💖
-              </span>
-              </Link>
-              <div className="flex items-center gap-5"></div>
-              <Link href="/upload">
+            <Link href="/upload">
               <span role="img" aria-label="stars">
-               ✨
+                ✨
               </span>
-              </Link>
-              {walletConnected ? (
-                <p className="text-sm bottom-2 border-2 border-gray-600 rounded-md border-dotted p-1">
-                  {walletAddress}
-                </p>
-              ) : (
-                <button
-                  className="text-sm bottom-2 border-2 border-gray-600 rounded-md border-dotted  p-1"
-                  onClick={connectWallet}
-                >
-                  Connect Wallet
-                </button>
-              )}
-            </div>
+            </Link>
+            {walletConnected ? (
+              <p className="text-sm bottom-2 border-2 border-gray-600 rounded-md border-dotted p-1">
+                {walletAddress}
+              </p>
+            ) : (
+              <button
+                className="text-sm bottom-2 border-2 border-gray-600 rounded-md border-dotted p-1"
+                onClick={connectWallet}
+              >
+                Connect Wallet
+              </button>
+            )}
           </nav>
         </header>
         <main className="container m-auto mt-4 px-4">{children}</main>
         <footer className="flex h-5 bg-black text-sm justify-center items-center shadow-inner">
-          Copyright ©{date.getFullYear()} LUV NFT
+          ©{date.getFullYear()} LUV NFT
         </footer>
       </div>
     </>

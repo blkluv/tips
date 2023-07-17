@@ -68,20 +68,21 @@ export const Card = ({ img, txt, author, tip }) => {
 
   return (
     <div className="max-w-sm bg-gradient-to-b from-blue-900 to-black rounded-lg border border-gray-200 shadow-md">
-      <img className="rounded-t-lg" src={`https://${img}.ipfs.w3s.link`} alt="Image" />
-      <div className="px-3 h-30">
-        <p className="text-base">{txt}</p>
-      </div>
-      <div className="pt-4 mb-3 flex justify-center items-center">
-        <button
-          className="p-1 w-24 items-center text-gray-900 text-sm bg-white border border-black rounded-md shadow-lg"
-          onClick={() => buyMeCoffee({ author })}
-        >
-          <span role="img" aria-label="Pink Heart">
-            💝
-          </span>
-        </button>
-      </div>
-    </div>
+  <img className="rounded-t-lg" src={`https://${img}.ipfs.w3s.link`} alt="Image" />
+  <div className="px-3 h-30">
+    <p className="text-white">{txt}</p>
+  </div>
+  <div className="pt-4 mb-3 flex justify-center items-center">
+    <button
+      className="p-1 w-24 items-center text-white text-sm bg-white border border-black rounded-md shadow-lg"
+      onClick={() => buyMeCoffee({ author })}
+    >
+      <span role="img" aria-label="Pink Heart">
+        💝
+      </span>
+    </button>
+  </div>
+</div>
+
   );
 };

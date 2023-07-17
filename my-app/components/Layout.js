@@ -71,20 +71,20 @@ function Layout({ title, children }) {
                     💕
                   </span>
                 </span>
-                <div className="flex items-center gap-5 ml-auto">
-                  <Link href="/profile">
-                    <span role="img" aria-label="Heart with stars">
-                      💖
-                    </span>
-                  </Link>
-                  <Link href="/content">
-                    <span role="img" aria-label="Globe">
-                      🌍
-                    </span>
-                  </Link>
-                </div>
               </div>
             </Link>
+            <div className="flex items-center gap-5 ml-auto">
+              <Link href="/profile">
+                <span role="img" aria-label="Heart with stars">
+                  💖
+                </span>
+              </Link>
+              <Link href="/content">
+                <span role="img" aria-label="Globe">
+                  🌍
+                </span>
+              </Link>
+            </div>
             {walletConnected ? (
               <p className="text-sm bottom-2 border-2 border-gray-600 rounded-md border-dotted p-1">
                 {walletAddress}

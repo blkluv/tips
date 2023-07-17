@@ -67,36 +67,21 @@ export const Card = ({ img, txt, author, tip }) => {
   };
 
   return (
-    <div className="max-w-sm  bg-gradient-to-b from-blue-900 to-black rounded-lg border border-gray-200 shadow-md">
-      <img className="rounded-t-lg" src={`https://${img}.ipfs.w3s.link`} />
+    <div className="max-w-sm bg-gradient-to-b from-blue-900 to-black rounded-lg border border-gray-200 shadow-md">
+      <img className="rounded-t-lg" src={`https://${img}.ipfs.w3s.link`} alt="Image" />
       <div className="px-3 h-30">
         <p className="text-base">{txt}</p>
       </div>
       <div className="pt-4 mb-3 flex justify-center items-center">
         <button
-          className="p-1 w-24 items-center text-gray-50 text-sm bg-gradient-to-r from-indigo-900 to-violet-600 rounded-md shadow-lg"
+          className="p-1 w-24 items-center text-gray-900 text-sm bg-white border border-black rounded-md shadow-lg"
           onClick={() => buyMeCoffee({ author })}
         >
-          Tip
+          <span role="img" aria-label="Purple Heart">
+            💜
+          </span>
         </button>
       </div>
     </div>
   );
 };
-
-/*
-<div className="mb-5 block rounded-lg border bg-white border-gray-200 shadow-md;">
-      <img className="w-full" src={`https://${img}.ipfs.w3s.link`} />
-      <div className="px-6 py-4 h-30">
-        <p className="text-gray-700 text-base bg-blue-50">{txt}</p>
-      </div>
-      <div className="px-2 mb-3 flex justify-center items-center">
-        <button
-          className="p-2 w-22 items-center text-gray-50 text-sm bg-gradient-to-r from-indigo-900 to-violet-600 rounded-full shadow-lg"
-          onClick={() => buyMeCoffee({ author })}
-        >
-          Subscribe
-        </button>
-      </div>
-    </div>
-*/

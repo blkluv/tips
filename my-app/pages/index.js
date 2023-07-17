@@ -136,15 +136,14 @@ export default function Home() {
             data-aos="zoom-y-out"
             data-aos-delay="150"
           >
-            <span className="bg-clip-text text-3xl  text-transparent bg-gradient-to-r from-blue-500 to-teal-400">
+            <span className="bg-clip-text text-3xl  text-transparent bg-gradient-to-r from-pink-500 to-purple-400">
               Decentralized Social Media{" "}
             </span>
-            Built on top of the Polygon blockchain, our platform allows users to 
-            create, share, and view images they luv. Unlock the magic with a tap of 💜 to send a tip!
+            Built on top of the Polygon blockchain, luv is the new like. Unlock the magic with a tap of 💝 to send a tip!
           </p>
           <button
             onClick={connectWallet}
-            className="items-center bg-gradient-to-r from-blue-500 to-teal-400 rounded-full font-medium p-4 shadow-lg"
+            className="items-center bg-gradient-to-r from-pink-500 to-purple-400 rounded-full font-medium p-4 shadow-lg"
           >
             Connect Wallet
           </button>
@@ -155,7 +154,7 @@ export default function Home() {
             <div className="flex-col items-center">
               <textarea
                 value={description}
-                placeholder="Write Something..."
+                placeholder="Write Something positive..."
                 className="w-80 h-32 placeholder:text-gray-600 bg-slate-700  rounded-md mt-2 p-2 border border-[#444752] focus:outline-none"
                 onChange={(e) => setDescription(e.target.value)}
               />
@@ -191,12 +190,14 @@ export default function Home() {
               />
             </div>
             <div>
-              <button
-                className="items-center bg-gradient-to-r from-blue-500 to-teal-400 rounded-full font-medium p-2 shadow-lg m-4 w-24"
-                onClick={addPost}
-              >
-                Post
-              </button>
+            <button
+            className="items-center bg-gradient-to-r from-pink-500 to-purple-400 rounded-full font-medium p-2 shadow-lg m-4 w-24"
+            onClick={addPost}
+            >
+            <span role="img" aria-label="Sparkles">
+            ✨
+            </span>
+            </button>
             </div>
           </div>
         </Layout>

@@ -77,8 +77,8 @@ export const Card = ({ img, txt, author, tip }) => {
           className="p-1 w-24 items-center text-gray-900 text-sm bg-white border border-black rounded-md shadow-lg"
           onClick={() => buyMeCoffee({ author })}
         >
-          <span role="img" aria-label="Purple Heart">
-            💜
+          <span role="img" aria-label="Pink Heart">
+            💝
           </span>
         </button>
       </div>

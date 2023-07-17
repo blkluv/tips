@@ -61,24 +61,31 @@ function Layout({ title, children }) {
         <meta name="description" content="Social Media" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <div className="flex text-white bg-gray-900 min-h-screen flex-col justify-between">
+      <div className="flex text-black bg-white min-h-screen flex-col justify-between">
         <header>
-          <nav className="flex h-12 items-center px-4 bg-gradient-to-r  from-black to-blue-900 justify-between shadow-md">
+          <nav className="flex h-12 items-center px-4 bg-black text-white justify-between shadow-md">
             <Link href="/">
-              <span className="bg-clip-text text-3xl  text-transparent bg-gradient-to-r from-violet-400 to-blue-500">
+              <span className="bg-clip-text text-3xl  text-transparent bg-gradient-to-r from-pink-400 to-purple-500">
                 LUV NFT
               </span>
+              <Link href="/content">
+              <span role="img" aria-label="Globe">
+               🌍
+              </span>
+              </Link>
             </Link>
             <div className="flex items-center gap-5">
-              <Link href="/content">
-                <p>Explore</p>
+            <Link href="/profile">
+              <span role="img" aria-label="Heart with stars">
+               💖
+              </span>
               </Link>
-
-              <Link href="/profile">
-                <p>Profile</p>
+              <div className="flex items-center gap-5"></div>
+              <Link href="/upload">
+              <span role="img" aria-label="stars">
+               ✨
+              </span>
               </Link>
-
               {walletConnected ? (
                 <p className="text-sm bottom-2 border-2 border-gray-600 rounded-md border-dotted p-1">
                   {walletAddress}

@@ -58,7 +58,7 @@ function Layout({ title, children }) {
     <>
       <Head>
         <title>{title ? title + " - LUV NFT" : "LUV NFT"}</title>
-        <meta name="description" content="Social Media" />
+        <meta name="Heart to heart decentralized social media platform" content="Social Media" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="flex text-black bg-white min-h-screen flex-col justify-between">
@@ -84,11 +84,6 @@ function Layout({ title, children }) {
                   </Link>
                 </div>
               </div>
-            </Link>
-            <Link href="/upload">
-              <span role="img" aria-label="stars">
-                ✨
-              </span>
             </Link>
             {walletConnected ? (
               <p className="text-sm bottom-2 border-2 border-gray-600 rounded-md border-dotted p-1">

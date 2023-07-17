@@ -92,8 +92,10 @@ function Content() {
 
   return (
     <Layout title="Content">
-      <div className="p-4 bg-slate-900">
-        <p className="text-center text-xl border-1 mb-3">Explore</p>
+      <div className="p-4 bg-white">
+      <p className="text-center text-xl border-1 mb-3" role="img" aria-label="Globe">
+          🌍
+        </p>
         <main>
           <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">
             {postdata.length > 1 ? (

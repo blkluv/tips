@@ -1,4 +1,4 @@
-import { providers } from "ethers";
+{ providers } from "ethers";
 import Head from "next/head";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -61,7 +61,7 @@ function Layout({ title, children }) {
         <meta name="Heart to heart decentralized social media platform" content="Social Media" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="flex text-black bg-white flex-col justify-between">
+      <div className="flex text-black bg-white min-h-screen flex-col justify-between">
         <header>
           <nav className="flex h-12 items-center px-4 bg-black text-white justify-between shadow-md">
             <Link href="/">
@@ -107,5 +107,3 @@ function Layout({ title, children }) {
     </>
   );
 }
-
-export default Layout;
